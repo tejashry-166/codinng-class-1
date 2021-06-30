@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class number
+{
+public static void main(String args[])
+{
+int n,x,y,q=0,r,no_count=1;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter no.");
+n=sc.nextInt();
+System.out.println("enter no. you what to replace");
+x=sc.nextInt();
+System.out.println("enter no. you what to replace with");
+y=sc.nextInt();
+while(n!=0)
+{
+r=n%10;
+n=n/10;
+if(r==x)
+{
+r=y;
+}
+q=(r*no_count)+q;
+no_count=no_count*10;
+}
+System.out.println(q);
+}
+}
