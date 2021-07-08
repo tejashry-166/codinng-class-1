@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class primeno 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int size=sc.nextInt();
+        System.out.println("Enter the array elements: ");
+        int a[]=new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        System.out.println("the array elements are: ");
+        for(int i=0;i<size;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+        System.out.println("\n prime numbers in the array are: ");
+        for(int i=0;i<size;i++)
+        {
+            int count=0;
+            for(int j=2;j<a[i]-1;j++)
+            {
+                if(a[i]%j==0)
+                {
+                    count=count+1;
+                }
+            }
+            if(count==0)
+            {
+                System.out.print(a[i]+" ");
+            }
+        }
+    }
+}
+
+
+
+java -cp /tmp/8Y2Ortu9BG primeno
+Enter the size of the array: 
+5
+Enter the array elements: 
+2 5 7 10 12
+the array elements are: 
+2 5 7 10 12 
+ prime numbers in the array are: 
+2 5 7 
