@@ -1,0 +1,14 @@
+import java.util.*;
+public class assignment1 {
+    public static void main(String args[]) {
+        String str="this is assignment question";
+        String words[]=str.split(" ");
+        String capitalizeStr="";
+        for(String word:words){
+            String firstLetter=word.substring(0,1);
+            String remainingLetters=word.substring(1); 
+            capitalizeStr+=firstLetter.toUpperCase()+remainingLetters+" ";
+        }
+        System.out.println(capitalizeStr);
+    }
+}
